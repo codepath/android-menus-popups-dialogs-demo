@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="com.codepath.example.menuspopupsdialogsdemo.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <Button
+        android:id="@+id/btnShowPopupWindow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onShowPopupWindow"
+        android:layout_alignBaseline="@+id/btnShowPopupMenu"
+        android:layout_alignBottom="@+id/btnShowPopupMenu"
+        android:layout_toRightOf="@+id/btnShowPopupMenu"
+        android:text="PopWindow" />
+
+    <ListView
+        android:id="@+id/lvItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvLabel" >
+
+    </ListView>
+
+    <Button
+        android:id="@+id/btnShowDialogWindow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lvItems"
+        android:layout_alignParentTop="true"
+        android:onClick="onShowDialogWindow"
+        android:text="Dialog Window" />
+
+    <Button
+        android:id="@+id/btnShowAlertDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnShowDialogWindow"
+        android:layout_alignBottom="@+id/btnShowDialogWindow"
+        android:layout_toRightOf="@+id/btnShowDialogWindow"
+        android:onClick="onShowAlertDialog"
+        android:text="Dialog Alert" />
+
+    <TextView
+        android:id="@+id/tvLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnShowPopupMenu"
+        android:layout_alignRight="@+id/lvItems"
+        android:layout_below="@+id/btnShowPopupMenu"
+        android:text="Click item below to trigger contextual action mode" />
+
+    <Button
+        android:id="@+id/btnShowPopupMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onShowPopupMenu"
+        android:layout_alignLeft="@+id/btnShowDialogWindow"
+        android:layout_below="@+id/btnShowDialogWindow"
+        android:text="PopMenu" />
+
+</RelativeLayout>
